@@ -1,16 +1,17 @@
-<!-- app/views/jobs/search.html.erb -->
-
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-8">
       <h2 class="text-center mb-4">Search Results</h2>
       
-      <% if @results.any? %>
+      <% if @results["jobs_results"].any? %>
         <div class="list-group">
-          <% @results.each do |result| %>
+          <% @results["jobs_results"].each do |result| %>
             <div class="list-group-item">
-              <h5><%= result['title'] %></h5>
-              <p><%= result['snippet'] %></p>
+              <h5><%= result["title"] %></h5>
+              <p>Company: <%= result["company_name"] %></p>
+              <p>Location: <%= result["location"] %></p>
+              <p>Source: <%= result["via"] %></p>
+              <p>Description: <%= result["description"] %></p>
             </div>
           <% end %>
         </div>
