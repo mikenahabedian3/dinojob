@@ -12,6 +12,9 @@ gem 'devise'
 # Got rid of Puma due to errors everywhere
 gem 'webrick', '~> 1.7'
 
+# Httparty for SERPapi calls
+gem 'httparty'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

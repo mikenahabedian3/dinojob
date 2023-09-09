@@ -1,16 +1,17 @@
 # config/routes.rb
 
 Rails.application.routes.draw do
-
-  # This line defines the new route for the dashboard
+  # The route for the dashboard
   get 'dashboard', to: 'dashboard#index'
+  
+  # The route for job index and search pages
+  resources :jobs, only: [:index, :show] do
+    collection do
+      get 'search'
+    end
+  end
 
-  # The route for job index page here
-  resources :jobs, only: [:index]
-
-  # The route for Searches here
-  resources :searches, only: [:index]
-
+  # Devise routes
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
@@ -19,7 +20,6 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
-  root 'searches#index'
-
+  # Setting the root route to jobs index action
+  root 'jobs#index'
 end
-
