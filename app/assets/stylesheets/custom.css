@@ -1,0 +1,25 @@
+/* app/assets/stylesheets/custom.css */
+
+/* Navbar styles */
+.navbar.bg-black {
+  background-color: black;
+}
+
+/* Button styles */
+.btn-purple {
+  background-color: #800080;
+  color: white;
+}
+
+.btn-white {
+  background-color: white;
+  color: black;
+}
+
+/* Logo styles */
+.logo {
+  width: 100px; /* Adjust the width as needed */
+  height: auto;
+}
+
+/* Rest of your existing styles */

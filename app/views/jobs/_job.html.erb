@@ -1,0 +1,4 @@
+<div class="job">
+  <h2><%= link_to job.title, job_path(job) %></h2>
+  <p><%= truncate(job.description, length: 100) %></p> <!-- Truncates the description to 100 characters -->
+</div>

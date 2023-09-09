@@ -1,0 +1,35 @@
+/* app/assets/stylesheets/application.css */
+
+/* General Styles */
+body {
+    background-color: #f4f4f4;
+}
+
+/* Navigation Styles */
+nav {
+  float: right; 
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+} 
+
+nav li {
+  display: inline-block;
+  margin-left: 10px; 
+}
+
+/* Card Styles */
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form/Input Styles */
+.input-group .form-control {
+    border-right: 0;
+}
+
+.input-group-append .btn {
+    border-left: 0;
+}
