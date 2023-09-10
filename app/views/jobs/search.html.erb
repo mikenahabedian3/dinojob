@@ -1,20 +1,22 @@
+<!-- app/views/jobs/search.html.erb -->
+
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-8">
       <h2 class="text-center mb-4">Search Results</h2>
       
-      <% if @results["jobs_results"].any? %>
-        <div class="list-group">
-          <% @results["jobs_results"].each do |result| %>
-            <div class="list-group-item">
+      <% if @results["jobs_results"].present? %>
+        <% @results["jobs_results"].each do |result| %>
+          <div class="list-group-item">
+            <%= link_to jobs_details_path(id: result["id"]) do %> 
               <h5><%= result["title"] %></h5>
-              <p>Company: <%= result["company_name"] %></p>
-              <p>Location: <%= result["location"] %></p>
-              <p>Source: <%= result["via"] %></p>
-              <p>Description: <%= result["description"] %></p>
-            </div>
-          <% end %>
-        </div>
+            <% end %>
+            <p>Company: <%= result["company_name"] %></p>
+            <p>Location: <%= result["location"] %></p>
+            <p>Source: <%= result["via"] %></p>
+            <p>Description: <%= result["description"] %></p>
+          </div>
+        <% end %>
       <% else %>
         <p>No results found</p>
       <% end %>

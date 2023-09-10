@@ -22,4 +22,8 @@ Rails.application.routes.draw do
 
   # Setting the root route to jobs index action
   root 'jobs#index'
+
+  # route for displaying individual job details due to dynamic API, not DB API
+  get 'jobs/details', to: 'jobs#details'
+
 end

@@ -1,4 +1,8 @@
+<!-- app/views/jobs/_job.html.erb -->
+
 <div class="job">
-  <h2><%= link_to job.title, job_path(job) %></h2>
-  <p><%= truncate(job.description, length: 100) %></p> <!-- Truncates the description to 100 characters -->
+  <%= link_to job_path(job) do %>
+    <h2><%= job.title %></h2>    
+    <%= truncate(job.description, length: 100) %>    
+  <% end %>
 </div>
